@@ -1,0 +1,33 @@
+name:                ivory-liquid
+version:             0.1.0.0
+author:              Galois, Inc
+maintainer:          eseidel@galois.com
+copyright:           2013 Galois, Inc.
+category:            Language
+synopsis:            Sandbox for verifying Ivory with LiquidHaskell.
+description:         Sandbox for verifying Ivory with LiquidHaskell.
+homepage:            http://smaccmpilot.org/languages/ivory-introduction.html
+build-type:          Simple
+cabal-version:       >= 1.10
+license:             BSD3
+license-file:        LICENSE
+source-repository    this
+  type:     git
+  location: https://github.com/GaloisInc/ivory
+
+library
+  exposed-modules:      Uint8
+  hs-source-dirs:       examples
+  build-depends:        base >= 4.6,
+                        pretty >= 1.1,
+                        monadLib >= 3.7,
+                        template-haskell >= 2.8,
+                        mainland-pretty >= 0.2.4,
+                        wl-pprint,
+                        ivory,
+                        ivory-opts,
+                        ivory-backend-c,
+                        ivory-stdlib
+  default-language:     Haskell2010
+  ghc-options:          -Wall
+
